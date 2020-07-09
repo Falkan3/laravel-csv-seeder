@@ -3,7 +3,6 @@
 use App;
 use Carbon\Carbon;
 use DB;
-use Illuminate\Database\Schema;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use Log;
@@ -18,31 +17,37 @@ class CsvSeeder extends Seeder {
 	 *
 	 * @var string
 	 */
-	public string $table = '';
+	public $table = '';
 
 	/**
 	 * CSV filename
 	 *
 	 * @var string
 	 */
-	public string $filename = '';
+	public $filename = '';
 
 	/**
 	 * DB connection to use. Leave empty for default connection
+	 *
+	 * @var string
 	 */
-	public string $connection = '';
+	public $connection = '';
 
 	/**
 	 * DB fields to be hashed before import, For example a password field.
+	 *
+	 * @var array
 	 */
-	public array $hashable = ['password'];
+	public $hashable = ['password'];
 
 	/**
 	 * An SQL INSERT query will execute every time this number of rows
 	 * are read from the CSV. Without this, large INSERTS will silently
 	 * fail.
+	 *
+	 * @var int
 	 */
-	public int $insert_chunk_size = 50;
+	public $insert_chunk_size = 50;
 
 	/**
 	 * A closure that takes an array of CSV rows ($chunk) and inserts them into the DB.
@@ -62,29 +67,42 @@ class CsvSeeder extends Seeder {
 
 	/**
 	 * CSV delimiter (defaults to ,)
+	 *
+	 * @var string
 	 */
-	public string $csv_delimiter = ',';
+	public $csv_delimiter = ',';
 
 	/**
 	 * Number of rows to skip at the start of the CSV
+	 *
+	 * @var int
 	 */
-	public int $offset_rows = 0;
+	public $offset_rows = 0;
 
 	/**
 	 * Can be used to tell the import to trim any leading or trailing white space from the column;
+	 *
+	 * @var bool
 	 */
-	public bool $should_trim = false;
+	public $should_trim = false;
 
 	/**
 	 * Add created_at and updated_at to rows
+	 *
+	 * @var bool
 	 */
-	public bool $timestamps = false;
+	public $timestamps = false;
 	/**
 	 * created_at and updated_at values to be added to each row. Only used if
 	 * $this->timestamps is true
+	 *
+	 * @var string
 	 */
-	public string $created_at = '';
-	public string $updated_at = '';
+	public $created_at = '';
+	/**
+	 * @var string
+	 */
+	public $updated_at = '';
 
 	/**
 	 * The mapping of CSV to DB column. If not specified manually, the first
@@ -98,13 +116,17 @@ class CsvSeeder extends Seeder {
 	 *   2 => name,
 	 *   3 => description,
 	 * )
+	 *
+	 * @var array
 	 */
-	public array $mapping = [];
+	public $mapping = [];
 
 	/**
 	 * This variable controls whether to remove mapping array properties if they are not found in the DB table schema columns
+	 *
+	 * @var bool
 	 */
-	public bool $skip_missing_mappings = true;
+	public $skip_missing_mappings = true;
 
 	/**
 	 * Run DB seed

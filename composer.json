@@ -1,5 +1,5 @@
 {
-    "name": "flynsarmy/csv-seeder",
+    "name": "falkan3/csv-seeder",
     "description": "Allows seeding of the database with CSV files",
     "keywords": ["laravel", "csv", "seed", "seeds", "seeding"],
     "license": "MIT",
@@ -7,6 +7,10 @@
         {
             "name": "Flyn San",
             "email": "flynsarmy@gmail.com"
+        },
+        {
+            "name": "Adam Kocić",
+            "email": "falkan333@gmail.com"
         }
     ],
     "require": {

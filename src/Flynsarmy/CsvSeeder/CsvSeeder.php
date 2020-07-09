@@ -1,6 +1,6 @@
 <?php
 
-namespace Crockett\CsvSeeder;
+namespace Falkan3\CsvSeeder;
 
 use DB;
 use Illuminate\Database\Seeder;

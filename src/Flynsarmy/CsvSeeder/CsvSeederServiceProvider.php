@@ -1,4 +1,4 @@
-<?php namespace Flynsarmy\CsvSeeder;
+<?php namespace Falkan3\CsvSeeder;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -19,7 +19,7 @@ class CsvSeederServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->package('flynsarmy/csv-seeder');
+        $this->package('falkan3/csv-seeder');
     }
 
     /**

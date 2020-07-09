@@ -33,9 +33,9 @@ Your CSV's header row should match the DB columns you wish to import. IE to impo
 	1,Foo
 	2,Bar
 
-Seed classes must extend `Flynsarmy\CsvSeeder\CsvSeeder`, they must define the destination database table and CSV file path, and finally they must call `parent::run()` like so:
+Seed classes must extend `Falkan3\CsvSeeder\CsvSeeder`, they must define the destination database table and CSV file path, and finally they must call `parent::run()` like so:
 
-	use Flynsarmy\CsvSeeder\CsvSeeder;
+	use Falkan3\CsvSeeder\CsvSeeder;
 
 	class StopsTableSeeder extends CsvSeeder {
 

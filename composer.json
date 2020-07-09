@@ -23,7 +23,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Flynsarmy\\CsvSeeder\\": "src/"
+            "Falkan3\\CsvSeeder\\": "src/"
         }
     },
     "minimum-stability": "dev",

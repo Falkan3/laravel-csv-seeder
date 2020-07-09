@@ -1,4 +1,4 @@
-<?php namespace Flynsarmy\CsvSeeder;
+<?php namespace Falkan3\CsvSeeder;
 
 use App;
 use Carbon\Carbon;
